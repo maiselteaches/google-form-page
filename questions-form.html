@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form</title>
+    <style>
+        .teQAzf {
+            margin: auto;
+            max-width: 90vw !important;
+            width: 100% !important;
+        }
+        .KHCwJ.ErmvL {
+            max-height: 22.5vw !important;
+            max-width: 90vw !important;
+            height: 160px !important;
+            width: 90vw !important;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScEgvO9awIB_ctYx54id7F2CybYUJmjs2Ak1duvoGIhLODwtQ/viewform?embedded=true" style="width: 100%; height: 900px; border: none;"></iframe>
+</body>
+<script>
+    document.getElementById('google-form-iframe').onload = function() {
+        var iframe = document.getElementById('google-form-iframe');
+        var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        style.innerHTML = \`
+            .teQAzf {
+                margin: auto;
+                max-width: 90vw !important;
+                width: 100% !important;
+            }
+            .KHCwJ.ErmvL {
+                max-height: 22.5vw !important;
+                max-width: 90vw !important;
+                height: 160px !important;
+                width: 90vw !important;
+            }
+        \`;
+        iframeDoc.head.appendChild(style);
+    };
+</script>
+</html>
